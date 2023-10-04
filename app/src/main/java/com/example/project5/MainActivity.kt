@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         // Checks for Radio Button Change from Sources
         binding.SourceGroup.setOnCheckedChangeListener{
             // Sets our radio button based on what has been selected
-                _, checkedId -> val radioButton = view.findViewById<RadioButton>(checkedId)
+                _, checkedId -> val radioButton = binding.root.findViewById<RadioButton>(checkedId)
             // Sets our source variable to our selected Option
             source = radioButton.text.toString()
 
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         // Checks for Radio Button Change from Translation Sources
         binding.TranslationSource.setOnCheckedChangeListener{
             // Sets our radio button based on what has been selected
-                _, checkedId -> val radioButton = view.findViewById<RadioButton>(checkedId)
+                _, checkedId -> val radioButton = binding.root.findViewById<RadioButton>(checkedId)
 
             // Sets our translate variable to our selected Option
             translate = radioButton.text.toString()
